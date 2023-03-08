@@ -1,0 +1,11 @@
+@charset "UTF-8";
+
+.page-name {
+	color: blue;
+	font-family: serif;
+	font-style: itelic;
+}
+
+body {
+	background-color: cyan;
+}
