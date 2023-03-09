@@ -19,8 +19,14 @@ public class MyFirstServlet extends HttpServlet {
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int val = 19 * 20;
-		response.getWriter().append("<h1>Hello World!!!</h1>  <h3><i>" + val + "</i></h3>");
+		// int val = 19 * 20;
+		
+		String val1 = request.getParameter("value1");
+		Integer iVal1 = Integer.parseInt(val1);
+		
+		response.getWriter().append("Square of the number is: " + (iVal1 * iVal1));
+		
+		// response.getWriter().append("<h1>Hello World!!!</h1>  <h3><i>" + val + "</i></h3>");
 	}
 
 }
