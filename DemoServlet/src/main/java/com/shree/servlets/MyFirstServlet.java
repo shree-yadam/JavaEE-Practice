@@ -24,7 +24,12 @@ public class MyFirstServlet extends HttpServlet {
 		String val1 = request.getParameter("value1");
 		Integer iVal1 = Integer.parseInt(val1);
 		
-		response.getWriter().append("Square of the number is: " + (iVal1 * iVal1));
+		String val2 = request.getParameter("value2");
+		Integer iVal2 = Integer.parseInt(val2);
+		
+		response.getWriter().append("Product of " + iVal1 + " and " + iVal2 + " is: " + (iVal1 * iVal2));
+		
+		// response.getWriter().append("Square of the number is: " + (iVal1 * iVal1));
 		
 		// response.getWriter().append("<h1>Hello World!!!</h1>  <h3><i>" + val + "</i></h3>");
 	}
