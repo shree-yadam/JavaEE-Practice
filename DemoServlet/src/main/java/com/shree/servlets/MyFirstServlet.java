@@ -19,7 +19,8 @@ public class MyFirstServlet extends HttpServlet {
     }
     
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		response.getWriter().append("Hello World!!!");
+		int val = 19 * 20;
+		response.getWriter().append("<h1>Hello World!!!</h1>  <h3><i>" + val + "</i></h3>");
 	}
 
 }
