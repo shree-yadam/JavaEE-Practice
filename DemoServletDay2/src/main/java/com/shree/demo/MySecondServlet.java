@@ -19,7 +19,12 @@ public class MySecondServlet extends HttpServlet {
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		mvName = request.getParameter("fullName");
-		response.getWriter().append("Served at: ").append(request.getContextPath());
+		String phoneNumber = request.getParameter("phoneNumber");
+		String gender = request.getParameter("gender");
+		//response.getWriter().append("Served at: ").append(request.getContextPath());
+		response.getOutputStream().println("NAME: " + mvName);
+		response.getOutputStream().println("PHONE NUMBER: " + phoneNumber);
+		response.getOutputStream().println("GENDER: " + gender);
 	}
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
