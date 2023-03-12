@@ -1,5 +1,6 @@
 .DS_Store
 Recordings/
+Servers/
 ### Ansible files ###
 *.retry
 
