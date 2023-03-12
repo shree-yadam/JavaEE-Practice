@@ -24,9 +24,12 @@ public class MySecondServlet extends HttpServlet {
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("fullName");
-		//mvName = request.getParameter("fullName");
+		String phoneNumber = request.getParameter("phoneNumber");
+		String gender = request.getParameter("gender");
 		
-		response.getOutputStream().print("Post is called ... value passed is " + name + " === " + mvName);
+		response.getOutputStream().println("NAME: " + name);
+		response.getOutputStream().println("PHONE NUMBER: " + phoneNumber);
+		response.getOutputStream().println("GENDER: " + gender);
 	}
 
 }
